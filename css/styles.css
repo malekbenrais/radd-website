@@ -484,6 +484,28 @@ html.has-motion .section__head[data-reveal] { opacity: 1; transform: none; }
   .hero__cta .btn { width: 100%; }
 }
 
+/* ===== Mobile hardening: never let anything overflow or crowd ===== */
+@media (max-width: 900px) {
+  /* The phone mockup scales fluidly and is never wider than the screen */
+  .phone { width: min(300px, 78vw); height: auto; aspect-ratio: 1 / 2; }
+  .phone--demo { width: min(300px, 78vw); }
+  .hero__phone, .demo__phone { width: 100%; max-width: 100%; }
+  /* Keep floating badges inside the viewport */
+  .hero__badge { max-width: 46vw; }
+}
+@media (max-width: 540px) {
+  .phone { width: min(270px, 82vw); }
+  .phone--demo { width: min(270px, 82vw); }
+  /* Comfortable section padding + headline sizing on phones */
+  .section { padding: 56px 0; }
+  h1 { font-size: clamp(1.85rem, 8vw, 2.4rem); }
+  .guarantee { flex-direction: column; text-align: center; gap: 10px; padding: 18px; }
+  .cta__assure { gap: 14px; }
+  /* Larger, easier tap targets for FAQ + form controls */
+  .field input, .field textarea { font-size: 16px; } /* prevents iOS zoom-on-focus */
+  .feature__badge { position: static; display: inline-block; margin-bottom: 10px; }
+}
+
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { animation: none !important; transition: none !important; }
   [data-reveal] { opacity: 1; transform: none; }
