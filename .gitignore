@@ -1,0 +1,11 @@
+# OS / editor junk
+.DS_Store
+Thumbs.db
+*.log
+.vscode/
+.idea/
+
+# Deploy tool folders
+.netlify/
+.vercel/
+node_modules/

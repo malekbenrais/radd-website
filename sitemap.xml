@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Replace REPLACE-WITH-YOUR-DOMAIN with your real domain once connected. -->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>https://REPLACE-WITH-YOUR-DOMAIN/</loc><changefreq>weekly</changefreq><priority>1.0</priority></url>
+  <url><loc>https://REPLACE-WITH-YOUR-DOMAIN/blog/reduce-no-shows.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://REPLACE-WITH-YOUR-DOMAIN/blog/whatsapp-booking.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://REPLACE-WITH-YOUR-DOMAIN/blog/speed-to-lead.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://REPLACE-WITH-YOUR-DOMAIN/blog/missed-calls-cost.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://REPLACE-WITH-YOUR-DOMAIN/blog/ai-vs-receptionist.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://REPLACE-WITH-YOUR-DOMAIN/blog/instagram-leads.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+</urlset>

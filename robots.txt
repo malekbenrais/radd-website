@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+# Update this once the real domain is connected:
+Sitemap: https://REPLACE-WITH-YOUR-DOMAIN/sitemap.xml

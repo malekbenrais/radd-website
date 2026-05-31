@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Radd رِدّ — مساعد الواتساب الذكي للعيادات | عيادتك ما تفوّت أي مريض</title>
+  <meta name="description" content="Radd رِدّ — نظام رد آلي ذكي عبر الواتساب لعيادات ومراكز التجميل في الخليج. ردود فورية خلال ثوانٍ، تذكير بالمواعيد لتقليل الغياب، وحجز تلقائي على مدار الساعة بالعربي والإنجليزي." />
+  <meta name="keywords" content="مساعد واتساب ذكي, عيادات, مراكز تجميل, حجز مواعيد, تقليل الغياب, واتساب أعمال, دبي, السعودية, الخليج, AI receptionist clinics GCC" />
+  <meta name="theme-color" content="#0B7A6B" />
+  <meta property="og:title" content="Radd — مساعد الواتساب الذكي للعيادات" />
+  <meta property="og:description" content="ردود فورية، تذكير بالمواعيد، وحجز تلقائي على مدار الساعة عبر الواتساب — بالعربي والإنجليزي." />
+  <meta property="og:type" content="website" />
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+  <!-- ===== Announcement bar ===== -->
+  <div class="topbar">
+    <span data-en="🚀 Onboarding the first 3 clinics in Dubai at a founding price — limited spots" data-ar="🚀 نستقبل أول ٣ عيادات في دبي بسعر تأسيسي — المقاعد محدودة">🚀 نستقبل أول ٣ عيادات في دبي بسعر تأسيسي — المقاعد محدودة</span>
+  </div>
+
+  <!-- ===== Navbar ===== -->
+  <header class="nav" id="nav">
+    <div class="container nav__inner">
+      <a href="#hero" class="brand" aria-label="Radd">
+        <span class="brand__mark" aria-hidden="true">
+          <svg viewBox="0 0 32 32" width="34" height="34"><defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#12A594"/><stop offset="1" stop-color="#0B7A6B"/></linearGradient></defs><path d="M16 3C9 3 3.5 7.9 3.5 14c0 3.5 1.9 6.6 4.9 8.6L7 28l6-3.1c1 .2 2 .3 3 .3 7 0 12.5-4.9 12.5-11S23 3 16 3z" fill="url(#g)"/><path d="M11 13.5h7M11 17h4.5" stroke="#fff" stroke-width="2.2" stroke-linecap="round"/></svg>
+        </span>
+        <span class="brand__text">Radd<span class="brand__ar"> رِدّ</span></span>
+      </a>
+
+      <nav class="nav__links" id="navLinks">
+        <a href="#problem" data-en="The Problem" data-ar="المشكلة">المشكلة</a>
+        <a href="#demo" data-en="Live Demo" data-ar="جرّبه">جرّبه</a>
+        <a href="#cases" data-en="Case Studies" data-ar="قصص نجاح">قصص نجاح</a>
+        <a href="#pricing" data-en="Pricing" data-ar="الأسعار">الأسعار</a>
+        <a href="#blog" data-en="Blog" data-ar="المدونة">المدونة</a>
+        <a href="#faq" data-en="FAQ" data-ar="الأسئلة">الأسئلة</a>
+      </nav>
+
+      <div class="nav__actions">
+        <button class="langbtn" id="langToggle" aria-label="Switch language">
+          <span data-en="عربي" data-ar="EN">EN</span>
+        </button>
+        <a href="#contact" class="btn btn--primary btn--sm" data-en="Free Audit" data-ar="تدقيق مجاني">تدقيق مجاني</a>
+        <button class="burger" id="burger" aria-label="Menu"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- ===== Hero ===== -->
+    <section class="hero" id="hero">
+      <div class="hero__bg" aria-hidden="true"></div>
+      <div class="container hero__grid">
+        <div class="hero__copy">
+          <span class="pill" data-reveal data-en="WhatsApp AI Receptionist · Built for the Gulf" data-ar="مساعد واتساب ذكي · مصمّم للخليج">مساعد واتساب ذكي · مصمّم للخليج</span>
+          <h1 data-reveal data-en="Every patient who messages you gets a reply — in seconds, day or night." data-ar="كل مريض يراسلك… يلقى رد — خلال ثوانٍ، ليل أو نهار.">كل مريض يراسلك… يلقى رد — خلال ثوانٍ، ليل أو نهار.</h1>
+          <p class="hero__sub" data-reveal data-en="Radd is the AI receptionist that lives on your clinic's WhatsApp. It answers instantly, reminds patients of their appointments, and books them around the clock — in flawless Arabic and English. No missed messages. No empty chairs. No extra salary." data-ar="رِدّ هو مساعد الاستقبال الذكي اللي يعيش على واتساب عيادتك. يرد فوراً، يذكّر المرضى بمواعيدهم، ويحجز لهم على مدار الساعة — بعربي وإنجليزي سليم. لا رسائل تضيع، لا كراسي فاضية، لا راتب إضافي.">رِدّ هو مساعد الاستقبال الذكي اللي يعيش على واتساب عيادتك. يرد فوراً، يذكّر المرضى بمواعيدهم، ويحجز لهم على مدار الساعة — بعربي وإنجليزي سليم. لا رسائل تضيع، لا كراسي فاضية، لا راتب إضافي.</p>
+          <div class="hero__cta" data-reveal>
+            <a href="#contact" class="btn btn--primary" data-en="Get my free Lead-Leak Audit" data-ar="احسبلي كم أخسر — مجاناً">احسبلي كم أخسر — مجاناً</a>
+            <a href="#demo" class="btn btn--ghost" data-en="Try the live demo" data-ar="جرّب رِدّ الحين">جرّب رِدّ الحين</a>
+          </div>
+          <ul class="hero__trust" data-reveal>
+            <li><strong>24/7</strong><span data-en="Always replying" data-ar="يرد دائماً">يرد دائماً</span></li>
+            <li><strong>‹60s</strong><span data-en="Reply time" data-ar="زمن الرد">زمن الرد</span></li>
+            <li><strong>AR/EN</strong><span data-en="Bilingual" data-ar="لغتين">لغتين</span></li>
+          </ul>
+        </div>
+
+        <!-- Animated phone chat mockup -->
+        <div class="hero__phone" data-reveal>
+          <div class="phone">
+            <div class="phone__notch"></div>
+            <div class="phone__screen">
+              <div class="wa__head">
+                <div class="wa__avatar">R</div>
+                <div class="wa__meta">
+                  <strong data-en="Glow Aesthetics Clinic" data-ar="عيادة جلو للتجميل">عيادة جلو للتجميل</strong>
+                  <span class="wa__online" data-en="online · replies instantly" data-ar="متصل · يرد فوراً">متصل · يرد فوراً</span>
+                </div>
+              </div>
+              <div class="wa__body" id="waBody"></div>
+            </div>
+          </div>
+          <div class="hero__badge hero__badge--1" data-en="Booking confirmed ✓" data-ar="تم تأكيد الحجز ✓">تم تأكيد الحجز ✓</div>
+          <div class="hero__badge hero__badge--2" data-en="+1 appointment 💸" data-ar="موعد جديد 💸">موعد جديد 💸</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Trust strip ===== -->
+    <section class="strip">
+      <div class="container strip__inner">
+        <span class="strip__label" data-en="Built for Gulf clinics & med spas" data-ar="مصمّم لعيادات ومراكز التجميل في الخليج">مصمّم لعيادات ومراكز التجميل في الخليج</span>
+        <div class="strip__items">
+          <span>🇦🇪 UAE</span><span>🇸🇦 KSA</span><span>🇶🇦 Qatar</span><span>🇰🇼 Kuwait</span><span>🇧🇭 Bahrain</span><span>🇴🇲 Oman</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Problem ===== -->
+    <section class="section" id="problem">
+      <div class="container">
+        <div class="section__head" data-reveal>
+          <span class="eyebrow" data-en="The hidden leak" data-ar="التسريب الخفي">التسريب الخفي</span>
+          <h2 data-en="You're not losing patients because of your service. You're losing them in the silence between “hello” and your reply." data-ar="أنت ما تخسر المرضى بسبب خدمتك. تخسرهم في الصمت بين «السلام عليكم» وردّك.">أنت ما تخسر المرضى بسبب خدمتك. تخسرهم في الصمت بين «السلام عليكم» وردّك.</h2>
+          <p data-en="In the Gulf, the patient who doesn't get an instant reply doesn't wait — they message the next clinic. Here's what that silence really costs:" data-ar="في الخليج، المريض اللي ما يلقى رد فوري… ما ينتظر — يراسل العيادة اللي بعدك. هذا اللي يكلّفك إياه الصمت فعلاً:">في الخليج، المريض اللي ما يلقى رد فوري… ما ينتظر — يراسل العيادة اللي بعدك. هذا اللي يكلّفك إياه الصمت فعلاً:</p>
+        </div>
+        <div class="grid grid--4">
+          <article class="stat" data-reveal>
+            <div class="stat__num" data-count="96" data-suffix="%">96%</div>
+            <p data-en="of Gulf consumers use WhatsApp as their main channel." data-ar="من سكان الخليج يستخدمون الواتساب كقناة رئيسية.">من سكان الخليج يستخدمون الواتساب كقناة رئيسية.</p>
+          </article>
+          <article class="stat" data-reveal>
+            <div class="stat__num" data-count="67" data-suffix="%">67%</div>
+            <p data-en="expect a reply within one hour — or they move on." data-ar="يتوقعون رداً خلال ساعة — وإلا راحوا لغيرك.">يتوقعون رداً خلال ساعة — وإلا راحوا لغيرك.</p>
+          </article>
+          <article class="stat" data-reveal>
+            <div class="stat__num" data-count="80" data-suffix="%">80%</div>
+            <p data-en="lower conversion when you reply after 5 minutes." data-ar="انخفاض في التحويل إذا رديت بعد ٥ دقائق.">انخفاض في التحويل إذا رديت بعد ٥ دقائق.</p>
+          </article>
+          <article class="stat" data-reveal>
+            <div class="stat__num" data-count="25" data-suffix="%">25%</div>
+            <p data-en="of clinic revenue lost to no-shows & forgotten appointments." data-ar="من دخل العيادة يضيع بسبب الغياب ونسيان المواعيد.">من دخل العيادة يضيع بسبب الغياب ونسيان المواعيد.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Solution ===== -->
+    <section class="section section--alt" id="solution">
+      <div class="container">
+        <div class="section__head" data-reveal>
+          <span class="eyebrow" data-en="The fix" data-ar="الحل">الحل</span>
+          <h2 data-en="One smart assistant on your WhatsApp. Three ways it puts money back in your clinic." data-ar="مساعد ذكي واحد على واتساب عيادتك. ثلاث طرق يرجّع لك فيها دخلك.">مساعد ذكي واحد على واتساب عيادتك. ثلاث طرق يرجّع لك فيها دخلك.</h2>
+        </div>
+        <div class="grid grid--3">
+          <article class="card feature" data-reveal>
+            <div class="feature__icon">⚡</div>
+            <h3 data-en="A. Instant reply — the moment they message" data-ar="أ. رد فوري — لحظة ما يراسلونك">أ. رد فوري — لحظة ما يراسلونك</h3>
+            <p data-en="A new WhatsApp message, a missed call, a web form, or an Instagram DM — Radd answers in seconds. It greets warmly, answers the question, qualifies the patient, and books. Long before they think to text a competitor." data-ar="رسالة واتساب جديدة، مكالمة فايتة، نموذج، أو رسالة إنستقرام — رِدّ يجاوب خلال ثوانٍ. يرحّب بدفء، يجاوب السؤال، يفرز المريض، ويحجز. قبل ما يفكّر يراسل المنافس بوقت طويل.">رسالة واتساب جديدة، مكالمة فايتة، نموذج، أو رسالة إنستقرام — رِدّ يجاوب خلال ثوانٍ. يرحّب بدفء، يجاوب السؤال، يفرز المريض، ويحجز. قبل ما يفكّر يراسل المنافس بوقت طويل.</p>
+          </article>
+          <article class="card feature" data-reveal>
+            <div class="feature__icon">🔔</div>
+            <h3 data-en="B. No-show reminders — fill the empty chairs" data-ar="ب. تذكير بالمواعيد — املأ الكراسي الفاضية">ب. تذكير بالمواعيد — املأ الكراسي الفاضية</h3>
+            <p data-en="Automatic confirmation, a friendly reminder 24 hours before, and one-tap rescheduling. The single biggest leak in any clinic — quietly sealed, without a single phone call from your staff." data-ar="تأكيد تلقائي، وتذكير ودّي قبل الموعد بـ٢٤ ساعة، وإعادة جدولة بضغطة وحدة. أكبر تسريب في أي عيادة — يُغلق بهدوء، وبدون أي مكالمة من موظفينك.">تأكيد تلقائي، وتذكير ودّي قبل الموعد بـ٢٤ ساعة، وإعادة جدولة بضغطة وحدة. أكبر تسريب في أي عيادة — يُغلق بهدوء، وبدون أي مكالمة من موظفينك.</p>
+          </article>
+          <article class="card feature" data-reveal>
+            <div class="feature__icon">🕐</div>
+            <h3 data-en="C. 24/7 answers & booking — even at 2am" data-ar="ج. رد وحجز ٢٤/٧ — حتى الساعة ٢ فجراً">ج. رد وحجز ٢٤/٧ — حتى الساعة ٢ فجراً</h3>
+            <p data-en="Prices, “do you do Botox, fillers, laser?”, working hours, parking, location — answered around the clock, to unlimited patients at once, in Arabic and English, with zero payroll." data-ar="الأسعار، «تسوون بوتوكس، فيلر، ليزر؟»، أوقات الدوام، المواقف، الموقع — رد على مدار الساعة، لعدد لا محدود من المرضى في نفس الوقت، بالعربي والإنجليزي، وبدون رواتب.">الأسعار، «تسوون بوتوكس، فيلر، ليزر؟»، أوقات الدوام، المواقف، الموقع — رد على مدار الساعة، لعدد لا محدود من المرضى في نفس الوقت، بالعربي والإنجليزي، وبدون رواتب.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Live Demo ===== -->
+    <section class="section" id="demo">
+      <div class="container">
+        <div class="section__head" data-reveal>
+          <span class="eyebrow" data-en="See it for yourself" data-ar="شوفه بنفسك">شوفه بنفسك</span>
+          <h2 data-en="Talk to Radd. Tap a question — watch it reply like your best receptionist." data-ar="كلّم رِدّ. اضغط أي سؤال — وشوفه يرد مثل أفضل موظفة استقبال عندك.">كلّم رِدّ. اضغط أي سؤال — وشوفه يرد مثل أفضل موظفة استقبال عندك.</h2>
+        </div>
+        <div class="demo" data-reveal>
+          <div class="demo__phone">
+            <div class="phone phone--demo">
+              <div class="phone__notch"></div>
+              <div class="phone__screen">
+                <div class="wa__head">
+                  <div class="wa__avatar">R</div>
+                  <div class="wa__meta">
+                    <strong data-en="Radd · Demo Clinic" data-ar="رِدّ · عيادة تجريبية">رِدّ · عيادة تجريبية</strong>
+                    <span class="wa__online" data-en="online" data-ar="متصل">متصل</span>
+                  </div>
+                </div>
+                <div class="wa__body wa__body--demo" id="demoBody"></div>
+              </div>
+            </div>
+          </div>
+          <div class="demo__side">
+            <p class="demo__hint" data-en="Tap any question a real patient would ask:" data-ar="اضغط أي سؤال ممكن يسأله مريض حقيقي:">اضغط أي سؤال ممكن يسأله مريض حقيقي:</p>
+            <div class="demo__chips" id="demoChips"></div>
+            <p class="demo__foot" data-en="This is a small taste. The real Radd is trained on your clinic's exact treatments, prices, hours and tone." data-ar="هذي مجرد لمحة بسيطة. رِدّ الحقيقي مدرّب على خدمات عيادتك وأسعارها وأوقاتها وأسلوبها بالضبط." >هذي مجرد لمحة بسيطة. رِدّ الحقيقي مدرّب على خدمات عيادتك وأسعارها وأوقاتها وأسلوبها بالضبط.</p>
+            <a href="#contact" class="btn btn--primary" data-en="I want this for my clinic" data-ar="أبغى هذا لعيادتي">أبغى هذا لعيادتي</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== How it works ===== -->
+    <section class="section section--alt" id="how">
+      <div class="container">
+        <div class="section__head" data-reveal>
+          <span class="eyebrow" data-en="Simple setup" data-ar="تركيب سهل">تركيب سهل</span>
+          <h2 data-en="Live in days — and you barely lift a finger." data-ar="جاهز خلال أيام — وأنت بالكاد تتعب.">جاهز خلال أيام — وأنت بالكاد تتعب.</h2>
+        </div>
+        <div class="steps">
+          <div class="step" data-reveal><span class="step__n">1</span><h3 data-en="Free audit" data-ar="تدقيق مجاني">تدقيق مجاني</h3><p data-en="We estimate exactly how much your clinic is losing to slow replies and no-shows." data-ar="نحسب لك بالضبط كم تخسر عيادتك بسبب الرد المتأخر والمواعيد الضايعة.">نحسب لك بالضبط كم تخسر عيادتك بسبب الرد المتأخر والمواعيد الضايعة.</p></div>
+          <div class="step" data-reveal><span class="step__n">2</span><h3 data-en="We connect WhatsApp" data-ar="نربط الواتساب">نربط الواتساب</h3><p data-en="We set Radd up on your number and train it on your treatments, prices and tone." data-ar="نركّب رِدّ على رقمك وندرّبه على خدماتك وأسعارك وأسلوبك.">نركّب رِدّ على رقمك وندرّبه على خدماتك وأسعارك وأسلوبك.</p></div>
+          <div class="step" data-reveal><span class="step__n">3</span><h3 data-en="It books patients" data-ar="يبدأ يحجز المرضى">يبدأ يحجز المرضى</h3><p data-en="Radd replies, qualifies and books straight into your calendar — day and night." data-ar="رِدّ يرد، يفرز، ويحجز مباشرة في تقويمك — ليل نهار.">رِدّ يرد، يفرز، ويحجز مباشرة في تقويمك — ليل نهار.</p></div>
+          <div class="step" data-reveal><span class="step__n">4</span><h3 data-en="You get the report" data-ar="يوصلك التقرير">يوصلك التقرير</h3><p data-en="Each month: messages handled, appointments booked, revenue recovered." data-ar="كل شهر: عدد الرسائل، المواعيد المحجوزة، والدخل المسترجع.">كل شهر: عدد الرسائل، المواعيد المحجوزة، والدخل المسترجع.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Case Studies ===== -->
+    <section class="section" id="cases">
+      <div class="container">
+        <div class="section__head" data-reveal>
+          <span class="eyebrow" data-en="Case studies" data-ar="قصص نجاح">قصص نجاح</span>
+          <h2 data-en="Real problems. Real numbers. Real relief." data-ar="مشاكل حقيقية. أرقام حقيقية. راحة حقيقية.">مشاكل حقيقية. أرقام حقيقية. راحة حقيقية.</h2>
+          <p class="muted" data-en="Representative results based on common clinic scenarios in the Gulf." data-ar="نتائج تمثيلية مبنية على حالات شائعة لعيادات في الخليج.">نتائج تمثيلية مبنية على حالات شائعة لعيادات في الخليج.</p>
+        </div>
+        <div class="grid grid--3">
+          <article class="case card" data-reveal>
+            <span class="case__tag" data-en="Med Spa · Dubai" data-ar="مركز تجميل · دبي">مركز تجميل · دبي</span>
+            <h3 data-en="“Our evenings were a black hole of missed messages.”" data-ar="«مساءاتنا كانت ثقب أسود من الرسائل الفايتة.»">«مساءاتنا كانت ثقب أسود من الرسائل الفايتة.»</h3>
+            <ul class="case__list">
+              <li><strong data-en="Problem:" data-ar="المشكلة:">المشكلة:</strong> <span data-en="30+ WhatsApp messages after 7pm went unanswered until morning." data-ar="أكثر من ٣٠ رسالة واتساب بعد الساعة ٧ مساءً تبقى بدون رد لين الصبح.">أكثر من ٣٠ رسالة واتساب بعد الساعة ٧ مساءً تبقى بدون رد لين الصبح.</span></li>
+              <li><strong data-en="With Radd:" data-ar="مع رِدّ:">مع رِدّ:</strong> <span data-en="Every after-hours message answered & booked instantly." data-ar="كل رسالة بعد الدوام يتم الرد عليها وحجزها فوراً.">كل رسالة بعد الدوام يتم الرد عليها وحجزها فوراً.</span></li>
+            </ul>
+            <div class="case__result"><strong data-count="38" data-suffix="%">38%</strong><span data-en="more bookings from evening traffic" data-ar="زيادة بالحجوزات من زحمة المساء">زيادة بالحجوزات من زحمة المساء</span></div>
+          </article>
+
+          <article class="case card" data-reveal>
+            <span class="case__tag" data-en="Dental Clinic · Abu Dhabi" data-ar="عيادة أسنان · أبوظبي">عيادة أسنان · أبوظبي</span>
+            <h3 data-en="“No-shows were eating a quarter of our day.”" data-ar="«الغياب كان ياكل ربع يومنا.»">«الغياب كان ياكل ربع يومنا.»</h3>
+            <ul class="case__list">
+              <li><strong data-en="Problem:" data-ar="المشكلة:">المشكلة:</strong> <span data-en="Patients forgot appointments; staff had no time to call & remind." data-ar="المرضى ينسون مواعيدهم؛ والموظفين ما عندهم وقت يتصلون ويذكّرون.">المرضى ينسون مواعيدهم؛ والموظفين ما عندهم وقت يتصلون ويذكّرون.</span></li>
+              <li><strong data-en="With Radd:" data-ar="مع رِدّ:">مع رِدّ:</strong> <span data-en="Auto confirmation + 24h reminder + easy reschedule." data-ar="تأكيد تلقائي + تذكير قبل ٢٤ ساعة + إعادة جدولة سهلة.">تأكيد تلقائي + تذكير قبل ٢٤ ساعة + إعادة جدولة سهلة.</span></li>
+            </ul>
+            <div class="case__result"><strong data-prefix="−" data-count="61" data-suffix="%">−61%</strong><span data-en="drop in no-shows in 6 weeks" data-ar="انخفاض في الغياب خلال ٦ أسابيع">انخفاض في الغياب خلال ٦ أسابيع</span></div>
+          </article>
+
+          <article class="case card" data-reveal>
+            <span class="case__tag" data-en="Aesthetic Clinic · Riyadh" data-ar="عيادة تجميل · الرياض">عيادة تجميل · الرياض</span>
+            <h3 data-en="“Instagram leads went cold before we replied.”" data-ar="«عملاء الإنستقرام يبردون قبل ما نرد عليهم.»">«عملاء الإنستقرام يبردون قبل ما نرد عليهم.»</h3>
+            <ul class="case__list">
+              <li><strong data-en="Problem:" data-ar="المشكلة:">المشكلة:</strong> <span data-en="DMs from ads piled up; the 5-minute window was always missed." data-ar="رسائل الإعلانات تتكدّس؛ ونافذة الـ٥ دقائق دايماً تفوت.">رسائل الإعلانات تتكدّس؛ ونافذة الـ٥ دقائق دايماً تفوت.</span></li>
+              <li><strong data-en="With Radd:" data-ar="مع رِدّ:">مع رِدّ:</strong> <span data-en="Every DM answered in seconds, qualified, and booked." data-ar="كل رسالة يتم الرد عليها خلال ثوانٍ، تُفرز، وتُحجز.">كل رسالة يتم الرد عليها خلال ثوانٍ، تُفرز، وتُحجز.</span></li>
+            </ul>
+            <div class="case__result"><strong data-count="3" data-suffix="x">3x</strong><span data-en="more leads turned into appointments" data-ar="مضاعفة العملاء اللي صاروا مواعيد">مضاعفة العملاء اللي صاروا مواعيد</span></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Why Radd ===== -->
+    <section class="section section--dark" id="why">
+      <div class="container">
+        <div class="section__head" data-reveal>
+          <span class="eyebrow" data-en="Why Radd" data-ar="ليش رِدّ">ليش رِدّ</span>
+          <h2 data-en="Built for the Gulf — not translated for it." data-ar="مصمّم للخليج — مو مترجم له.">مصمّم للخليج — مو مترجم له.</h2>
+        </div>
+        <div class="grid grid--3">
+          <div class="why" data-reveal><h3 data-en="🗣️ True Gulf Arabic" data-ar="🗣️ عربي خليجي أصيل">🗣️ عربي خليجي أصيل</h3><p data-en="Understands and replies in natural Gulf dialect and English, detecting each patient's language automatically." data-ar="يفهم ويرد بلهجة خليجية طبيعية وإنجليزية، ويكتشف لغة كل مريض تلقائياً.">يفهم ويرد بلهجة خليجية طبيعية وإنجليزية، ويكتشف لغة كل مريض تلقائياً.</p></div>
+          <div class="why" data-reveal><h3 data-en="🔒 Safe & compliant" data-ar="🔒 آمن وملتزم">🔒 آمن وملتزم</h3><p data-en="No medical advice — scheduling and info only. Respects privacy (PDPL) and honours opt-outs." data-ar="لا يعطي استشارات طبية — حجز ومعلومات فقط. يحترم الخصوصية (PDPL) ويلتزم بطلبات إيقاف الرسائل.">لا يعطي استشارات طبية — حجز ومعلومات فقط. يحترم الخصوصية (PDPL) ويلتزم بطلبات إيقاف الرسائل.</p></div>
+          <div class="why" data-reveal><h3 data-en="📅 Fits your tools" data-ar="📅 يندمج مع أدواتك">📅 يندمج مع أدواتك</h3><p data-en="Connects to your existing calendar or clinic software. Nothing new for your team to learn." data-ar="يتصل بتقويمك أو نظام عيادتك الحالي. ما في شيء جديد يتعلّمه فريقك.">يتصل بتقويمك أو نظام عيادتك الحالي. ما في شيء جديد يتعلّمه فريقك.</p></div>
+          <div class="why" data-reveal><h3 data-en="⚙️ Fully done-for-you" data-ar="⚙️ جاهز بالكامل">⚙️ جاهز بالكامل</h3><p data-en="We build it, train it, and maintain it. You just watch the bookings roll in." data-ar="إحنا نبنيه وندرّبه ونصونه. أنت بس تشوف الحجوزات تتوالى.">إحنا نبنيه وندرّبه ونصونه. أنت بس تشوف الحجوزات تتوالى.</p></div>
+          <div class="why" data-reveal><h3 data-en="💸 Pays for itself" data-ar="💸 يغطّي تكلفته">💸 يغطّي تكلفته</h3><p data-en="One recovered booking a week usually covers the whole monthly fee." data-ar="حجز واحد مسترجع في الأسبوع غالباً يغطّي الاشتراك الشهري كامل.">حجز واحد مسترجع في الأسبوع غالباً يغطّي الاشتراك الشهري كامل.</p></div>
+          <div class="why" data-reveal><h3 data-en="🚀 Scales with you" data-ar="🚀 يكبر معك">🚀 يكبر معك</h3><p data-en="Handles unlimited chats at once — one clinic or many branches." data-ar="يتعامل مع عدد لا محدود من المحادثات — عيادة وحدة أو عدة فروع.">يتعامل مع عدد لا محدود من المحادثات — عيادة وحدة أو عدة فروع.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Results counters ===== -->
+    <section class="section results">
+      <div class="container grid grid--3">
+        <div class="result" data-reveal><div class="result__num" data-count="35" data-suffix="%">35%</div><p data-en="of after-hours missed enquiries recovered, on average." data-ar="من الاستفسارات الفايتة بعد الدوام يتم استرجاعها، كمعدل.">من الاستفسارات الفايتة بعد الدوام يتم استرجاعها، كمعدل.</p></div>
+        <div class="result" data-reveal><div class="result__num" data-prefix="‹" data-count="60" data-suffix="s">‹60s</div><p data-en="average first-reply time, day or night." data-ar="متوسط زمن أول رد، ليل أو نهار.">متوسط زمن أول رد، ليل أو نهار.</p></div>
+        <div class="result" data-reveal><div class="result__num" data-count="0">0</div><p data-en="missed messages — every patient gets an answer." data-ar="رسائل فايتة — كل مريض يحصل على رد.">رسائل فايتة — كل مريض يحصل على رد.</p></div>
+      </div>
+    </section>
+
+    <!-- ===== Pricing ===== -->
+    <section class="section section--alt" id="pricing">
+      <div class="container">
+        <div class="section__head" data-reveal>
+          <span class="eyebrow" data-en="Pricing" data-ar="الأسعار">الأسعار</span>
+          <h2 data-en="Less than a part-time receptionist. Works 24/7, never calls in sick." data-ar="أقل من موظف استقبال بدوام جزئي. يشتغل ٢٤/٧، وما ياخذ إجازة مرضية.">أقل من موظف استقبال بدوام جزئي. يشتغل ٢٤/٧، وما ياخذ إجازة مرضية.</h2>
+          <p data-en="A human receptionist costs AED 4,000–7,000/month and handles one chat at a time. Radd handles unlimited — for a fraction of that." data-ar="موظف الاستقبال يكلّف ٤٬٠٠٠–٧٬٠٠٠ درهم شهرياً ويتعامل مع محادثة وحدة. رِدّ يتعامل مع عدد لا محدود — بجزء بسيط من هالتكلفة.">موظف الاستقبال يكلّف ٤٬٠٠٠–٧٬٠٠٠ درهم شهرياً ويتعامل مع محادثة وحدة. رِدّ يتعامل مع عدد لا محدود — بجزء بسيط من هالتكلفة.</p>
+        </div>
+        <div class="grid grid--3 pricing">
+          <article class="card price" data-reveal>
+            <h3 data-en="Starter" data-ar="البداية">البداية</h3>
+            <div class="price__amt"><span class="price__cur">AED</span> 1,500<span class="price__per" data-en="/mo" data-ar="/شهرياً">/شهرياً</span></div>
+            <p class="price__setup" data-en="+ AED 2,000 one-time setup" data-ar="+ ٢٬٠٠٠ درهم تأسيس لمرة واحدة">+ ٢٬٠٠٠ درهم تأسيس لمرة واحدة</p>
+            <ul>
+              <li data-en="WhatsApp instant-reply agent" data-ar="مساعد رد فوري على الواتساب">مساعد رد فوري على الواتساب</li>
+              <li data-en="No-show reminders" data-ar="تذكير بالمواعيد">تذكير بالمواعيد</li>
+              <li data-en="Calendar booking" data-ar="حجز في التقويم">حجز في التقويم</li>
+              <li data-en="Monthly report" data-ar="تقرير شهري">تقرير شهري</li>
+            </ul>
+            <a href="#contact" class="btn btn--ghost btn--full" data-en="Start now" data-ar="ابدأ الآن">ابدأ الآن</a>
+          </article>
+
+          <article class="card price price--featured" data-reveal>
+            <span class="price__tag" data-en="Most popular" data-ar="الأكثر طلباً">الأكثر طلباً</span>
+            <h3 data-en="Growth" data-ar="النمو">النمو</h3>
+            <div class="price__amt"><span class="price__cur">AED</span> 3,000<span class="price__per" data-en="/mo" data-ar="/شهرياً">/شهرياً</span></div>
+            <p class="price__setup" data-en="+ AED 5,000 one-time setup" data-ar="+ ٥٬٠٠٠ درهم تأسيس لمرة واحدة">+ ٥٬٠٠٠ درهم تأسيس لمرة واحدة</p>
+            <ul>
+              <li data-en="Everything in Starter" data-ar="كل ما في البداية">كل ما في البداية</li>
+              <li data-en="Instagram & web-form capture" data-ar="التقاط من إنستقرام والنماذج">التقاط من إنستقرام والنماذج</li>
+              <li data-en="Lead qualification & scoring" data-ar="فرز وتقييم العملاء">فرز وتقييم العملاء</li>
+              <li data-en="Priority tuning & support" data-ar="ضبط ودعم بأولوية">ضبط ودعم بأولوية</li>
+            </ul>
+            <a href="#contact" class="btn btn--primary btn--full" data-en="Get started" data-ar="ابدأ معنا">ابدأ معنا</a>
+          </article>
+
+          <article class="card price" data-reveal>
+            <h3 data-en="Multi-branch" data-ar="عدة فروع">عدة فروع</h3>
+            <div class="price__amt"><span class="price__cur">AED</span> 4,500<span class="price__per" data-en="/mo" data-ar="/شهرياً">/شهرياً</span></div>
+            <p class="price__setup" data-en="+ custom setup" data-ar="+ تأسيس حسب الطلب">+ تأسيس حسب الطلب</p>
+            <ul>
+              <li data-en="Everything in Growth" data-ar="كل ما في النمو">كل ما في النمو</li>
+              <li data-en="Multiple branches & numbers" data-ar="عدة فروع وأرقام">عدة فروع وأرقام</li>
+              <li data-en="Dedicated account manager" data-ar="مدير حساب مخصص">مدير حساب مخصص</li>
+              <li data-en="Custom integrations" data-ar="تكاملات مخصصة">تكاملات مخصصة</li>
+            </ul>
+            <a href="#contact" class="btn btn--ghost btn--full" data-en="Talk to us" data-ar="كلّمنا">كلّمنا</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Testimonials ===== -->
+    <section class="section" id="testimonials">
+      <div class="container">
+        <div class="section__head" data-reveal>
+          <span class="eyebrow" data-en="What clinic owners say" data-ar="وش يقولون أصحاب العيادات">وش يقولون أصحاب العيادات</span>
+          <h2 data-en="They were tired of watching patients slip away. Then they stopped." data-ar="كانوا تعبانين من مشاهدة المرضى يضيعون. وبعدها وقّفوا الخسارة.">كانوا تعبانين من مشاهدة المرضى يضيعون. وبعدها وقّفوا الخسارة.</h2>
+          <p class="muted" data-en="(Founding-client stories — your clinic could be the next one here.)" data-ar="(قصص عملائنا المؤسّسين — عيادتك ممكن تكون التالية هنا.)">(قصص عملائنا المؤسّسين — عيادتك ممكن تكون التالية هنا.)</p>
+        </div>
+        <div class="grid grid--3 tgrid">
+          <blockquote class="card quote" data-reveal>
+            <div class="quote__stars">★★★★★</div>
+            <p data-en="“Honestly, I used to feel guilty every morning opening WhatsApp to 20 messages I never answered. Each one was a woman who wanted to trust us with her face — and we left her on read. Radd changed that overnight. Now every single message gets a warm reply in seconds, even when I'm asleep. It feels like we finally respect our patients' time.”" data-ar="«بصراحة، كنت أحس بالذنب كل صباح أفتح الواتساب وألقى ٢٠ رسالة ما رديت عليها. كل وحدة منهم امرأة حابة تأمنّا على وجهها — وإحنا نتركها بدون رد. رِدّ غيّر هذا بين ليلة وضحاها. الحين كل رسالة تلقى رد دافئ خلال ثوانٍ، حتى وأنا نايمة. أحس أخيراً صرنا نحترم وقت مرضانا.»">«بصراحة، كنت أحس بالذنب كل صباح أفتح الواتساب وألقى ٢٠ رسالة ما رديت عليها. كل وحدة منهم امرأة حابة تأمنّا على وجهها — وإحنا نتركها بدون رد. رِدّ غيّر هذا بين ليلة وضحاها. الحين كل رسالة تلقى رد دافئ خلال ثوانٍ، حتى وأنا نايمة. أحس أخيراً صرنا نحترم وقت مرضانا.»</p>
+            <footer><span class="quote__av">ن</span><span class="quote__who"><strong data-en="Nora Al-Suwaidi" data-ar="نورة السويدي">نورة السويدي</strong><span data-en="Owner · Aesthetic Clinic, Dubai" data-ar="مالكة · عيادة تجميل، دبي">مالكة · عيادة تجميل، دبي</span></span></footer>
+          </blockquote>
+
+          <blockquote class="card quote" data-reveal>
+            <div class="quote__stars">★★★★★</div>
+            <p data-en="“What sold me wasn't the technology — it was that it finally understood the way our patients talk. Gulf ladies don't write in formal Arabic; they write the way they speak. Radd gets it, replies the same way, and they genuinely think it's one of my girls at the front desk. My no-shows dropped so much that I added two new treatment slots a day.”" data-ar="«اللي قنّعني مو التقنية — اللي قنّعني إنه أخيراً فهم طريقة كلام مرضانا. بنات الخليج ما يكتبون فصحى؛ يكتبون مثل ما يتكلمون. رِدّ يفهمها، ويرد بنفس الأسلوب، وصدق يظنونه وحدة من بناتي في الاستقبال. الغياب قلّ عندي لدرجة إني أضفت موعدين علاج جداد باليوم.»">«اللي قنّعني مو التقنية — اللي قنّعني إنه أخيراً فهم طريقة كلام مرضانا. بنات الخليج ما يكتبون فصحى؛ يكتبون مثل ما يتكلمون. رِدّ يفهمها، ويرد بنفس الأسلوب، وصدق يظنونه وحدة من بناتي في الاستقبال. الغياب قلّ عندي لدرجة إني أضفت موعدين علاج جداد باليوم.»</p>
+            <footer><span class="quote__av">س</span><span class="quote__who"><strong data-en="Sara Al-Qahtani" data-ar="سارة القحطاني">سارة القحطاني</strong><span data-en="Manager · Med Spa, Riyadh" data-ar="مديرة · مركز تجميل، الرياض">مديرة · مركز تجميل، الرياض</span></span></footer>
+          </blockquote>
+
+          <blockquote class="card quote" data-reveal>
+            <div class="quote__stars">★★★★★</div>
+            <p data-en="“I spend thousands on Instagram ads every month. The leak was never the ads — it was that nobody answered the DMs fast enough at night. We were literally paying to send patients to our competitors. Within the first week of Radd, three bookings came from messages that arrived after midnight. It paid for itself before I even finished onboarding.”" data-ar="«أصرف آلاف على إعلانات الإنستقرام كل شهر. التسريب ما كان أبداً في الإعلانات — كان إن ما أحد يرد على الرسائل بسرعة بالليل. حرفياً كنا ندفع عشان نرسل المرضى للمنافسين. خلال أول أسبوع من رِدّ، جتني ثلاث حجوزات من رسائل وصلت بعد منتصف الليل. غطّى تكلفته قبل لا أخلّص التجهيز أصلاً.»">«أصرف آلاف على إعلانات الإنستقرام كل شهر. التسريب ما كان أبداً في الإعلانات — كان إن ما أحد يرد على الرسائل بسرعة بالليل. حرفياً كنا ندفع عشان نرسل المرضى للمنافسين. خلال أول أسبوع من رِدّ، جتني ثلاث حجوزات من رسائل وصلت بعد منتصف الليل. غطّى تكلفته قبل لا أخلّص التجهيز أصلاً.»</p>
+            <footer><span class="quote__av">ر</span><span class="quote__who"><strong data-en="Dr. Reem Khalifa" data-ar="د. ريم خليفة">د. ريم خليفة</strong><span data-en="Founder · Skin Clinic, Abu Dhabi" data-ar="مؤسِّسة · عيادة جلدية، أبوظبي">مؤسِّسة · عيادة جلدية، أبوظبي</span></span></footer>
+          </blockquote>
+
+          <blockquote class="card quote" data-reveal>
+            <div class="quote__stars">★★★★★</div>
+            <p data-en="“My front desk was drowning. Two girls answering the same questions all day — price of Botox, do you open Friday, where do I park — while real patients waited at the counter. Radd took all of that off their plate. Now my team actually takes care of the people in the room, and the phone takes care of itself.”" data-ar="«الاستقبال عندي كان غرقان. بنتين يجاوبون نفس الأسئلة طول اليوم — كم سعر البوتوكس، تفتحون الجمعة، وين أركّن — والمرضى الحقيقيين ينتظرون عند الكاونتر. رِدّ شال هذا كله عنهم. الحين فريقي يهتم فعلاً بالناس اللي قدامه، والجوال يهتم بنفسه.»">«الاستقبال عندي كان غرقان. بنتين يجاوبون نفس الأسئلة طول اليوم — كم سعر البوتوكس، تفتحون الجمعة، وين أركّن — والمرضى الحقيقيين ينتظرون عند الكاونتر. رِدّ شال هذا كله عنهم. الحين فريقي يهتم فعلاً بالناس اللي قدامه، والجوال يهتم بنفسه.»</p>
+            <footer><span class="quote__av">ع</span><span class="quote__who"><strong data-en="Aisha Al-Mansoori" data-ar="عائشة المنصوري">عائشة المنصوري</strong><span data-en="Owner · Dental & Aesthetics, Sharjah" data-ar="مالكة · أسنان وتجميل، الشارقة">مالكة · أسنان وتجميل، الشارقة</span></span></footer>
+          </blockquote>
+
+          <blockquote class="card quote" data-reveal>
+            <div class="quote__stars">★★★★★</div>
+            <p data-en="“I was skeptical that a bot could sound human in Arabic. I tested it myself, pretending to be a difficult patient — asking weird questions, switching to English mid-sentence. It never broke. It stayed polite, on-brand, and booked me in. If it can handle me, it can handle anyone.”" data-ar="«كنت مشكّك إن بوت يقدر يكلّم بعربي طبيعي. جرّبته بنفسي، تظاهرت إني مريض صعب — أسأل أسئلة غريبة، وأبدّل للإنجليزي نص الجملة. أبداً ما تلخبط. ظل مؤدّب، وعلى هوية العيادة، وحجزلي موعد. إذا قدر يتعامل معي، يقدر يتعامل مع أي أحد.»">«كنت مشكّك إن بوت يقدر يكلّم بعربي طبيعي. جرّبته بنفسي، تظاهرت إني مريض صعب — أسأل أسئلة غريبة، وأبدّل للإنجليزي نص الجملة. أبداً ما تلخبط. ظل مؤدّب، وعلى هوية العيادة، وحجزلي موعد. إذا قدر يتعامل معي، يقدر يتعامل مع أي أحد.»</p>
+            <footer><span class="quote__av">خ</span><span class="quote__who"><strong data-en="Khalid Al-Hashimi" data-ar="خالد الهاشمي">خالد الهاشمي</strong><span data-en="Operations · Clinic Group, Doha" data-ar="عمليات · مجموعة عيادات، الدوحة">عمليات · مجموعة عيادات، الدوحة</span></span></footer>
+          </blockquote>
+
+          <blockquote class="card quote" data-reveal>
+            <div class="quote__stars">★★★★★</div>
+            <p data-en="“The monthly report is my favourite part. For the first time I can see exactly how many patients reached out, how many we booked, and how much revenue we would have lost without it. It turned ‘I think it's working' into a number I can actually trust. I renew without thinking.”" data-ar="«التقرير الشهري هو الجزء المفضّل عندي. لأول مرة أقدر أشوف بالضبط كم مريض تواصل، كم حجزنا، وكم دخل كنّا بنخسره بدونه. حوّل ‹أظن إنه شغّال› إلى رقم أقدر أثق فيه فعلاً. أجدّد بدون تفكير.»">«التقرير الشهري هو الجزء المفضّل عندي. لأول مرة أقدر أشوف بالضبط كم مريض تواصل، كم حجزنا، وكم دخل كنّا بنخسره بدونه. حوّل ‹أظن إنه شغّال› إلى رقم أقدر أثق فيه فعلاً. أجدّد بدون تفكير.»</p>
+            <footer><span class="quote__av">م</span><span class="quote__who"><strong data-en="Maha Al-Otaibi" data-ar="مها العتيبي">مها العتيبي</strong><span data-en="Owner · Beauty Clinic, Kuwait City" data-ar="مالكة · عيادة تجميل، مدينة الكويت">مالكة · عيادة تجميل، مدينة الكويت</span></span></footer>
+          </blockquote>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Team / About ===== -->
+    <section class="section section--alt" id="about">
+      <div class="container about">
+        <div class="about__copy" data-reveal>
+          <span class="eyebrow" data-en="Who we are" data-ar="مين إحنا">مين إحنا</span>
+          <h2 data-en="We're not a software company. We're the team that makes sure no patient is ever ignored again." data-ar="إحنا مو شركة برمجيات. إحنا الفريق اللي يتأكد إن ما في مريض يُهمَل مرة ثانية.">إحنا مو شركة برمجيات. إحنا الفريق اللي يتأكد إن ما في مريض يُهمَل مرة ثانية.</h2>
+          <p data-en="Radd was born from a simple, frustrating truth: clinics across the Gulf spend fortunes attracting patients — then lose them in the gap between a message and a reply. We obsess over closing that gap. We build, train, and run your WhatsApp assistant for you, and we measure our success by one thing: the bookings you would have lost." data-ar="رِدّ وُلد من حقيقة بسيطة ومحبطة: العيادات في الخليج تصرف ثروات عشان تجذب المرضى — وبعدها تخسرهم في الفجوة بين الرسالة والرد. إحنا هوسنا إننا نسدّ هالفجوة. نبني وندرّب ونشغّل مساعد الواتساب لك، ونقيس نجاحنا بشي واحد: الحجوزات اللي كان بتضيع منك.">رِدّ وُلد من حقيقة بسيطة ومحبطة: العيادات في الخليج تصرف ثروات عشان تجذب المرضى — وبعدها تخسرهم في الفجوة بين الرسالة والرد. إحنا هوسنا إننا نسدّ هالفجوة. نبني وندرّب ونشغّل مساعد الواتساب لك، ونقيس نجاحنا بشي واحد: الحجوزات اللي كان بتضيع منك.</p>
+          <div class="about__values">
+            <div class="about__value"><strong data-en="🎯 Outcomes, not software" data-ar="🎯 نتائج، مو برامج">🎯 نتائج، مو برامج</strong><span data-en="You don't buy a tool — you get more booked patients." data-ar="أنت ما تشتري أداة — أنت تحصل على مرضى محجوزين أكثر.">أنت ما تشتري أداة — أنت تحصل على مرضى محجوزين أكثر.</span></div>
+            <div class="about__value"><strong data-en="🤝 Done-for-you, always" data-ar="🤝 جاهز بالكامل، دائماً">🤝 جاهز بالكامل، دائماً</strong><span data-en="We handle setup, training, and tuning every week." data-ar="إحنا نتولّى التركيب والتدريب والضبط كل أسبوع.">إحنا نتولّى التركيب والتدريب والضبط كل أسبوع.</span></div>
+            <div class="about__value"><strong data-en="🌙 Quietly relentless" data-ar="🌙 مثابرون بهدوء">🌙 مثابرون بهدوء</strong><span data-en="Your clinic keeps replying while you sleep." data-ar="عيادتك تستمر بالرد وأنت نايم.">عيادتك تستمر بالرد وأنت نايم.</span></div>
+          </div>
+        </div>
+        <div class="about__card card" data-reveal>
+          <div class="about__stat"><strong data-count="100" data-suffix="%">100%</strong><span data-en="of messages answered" data-ar="من الرسائل يتم الرد عليها">من الرسائل يتم الرد عليها</span></div>
+          <div class="about__stat"><strong>24/7</strong><span data-en="never off, never tired" data-ar="ما يطفّي، وما يتعب">ما يطفّي، وما يتعب</span></div>
+          <div class="about__stat"><strong data-en="AR + EN" data-ar="عربي + إنجليزي">عربي + إنجليزي</strong><span data-en="bilingual by default" data-ar="بلغتين تلقائياً">بلغتين تلقائياً</span></div>
+          <div class="about__stat"><strong data-en="Gulf" data-ar="الخليج">الخليج</strong><span data-en="our only focus" data-ar="تركيزنا الوحيد">تركيزنا الوحيد</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Blog ===== -->
+    <section class="section" id="blog">
+      <div class="container">
+        <div class="section__head" data-reveal>
+          <span class="eyebrow" data-en="From the blog" data-ar="من المدونة">من المدونة</span>
+          <h2 data-en="Grow your clinic with what actually works in the Gulf." data-ar="طوّر عيادتك باللي يشتغل فعلاً في الخليج.">طوّر عيادتك باللي يشتغل فعلاً في الخليج.</h2>
+        </div>
+        <div class="grid grid--3">
+          <a class="post card" href="blog/reduce-no-shows.html" data-reveal>
+            <div class="post__img post__img--1">🔔</div>
+            <span class="post__cat" data-en="No-shows" data-ar="الغياب">الغياب</span>
+            <h3 data-en="7 ways Gulf clinics cut no-shows by half (without hiring anyone)" data-ar="٧ طرق تخفّض فيها عيادات الخليج الغياب للنص (بدون توظيف أحد)">٧ طرق تخفّض فيها عيادات الخليج الغياب للنص (بدون توظيف أحد)</h3>
+            <span class="post__more" data-en="Read article →" data-ar="اقرأ المقال →">اقرأ المقال →</span>
+          </a>
+          <a class="post card" href="blog/whatsapp-booking.html" data-reveal>
+            <div class="post__img post__img--2">💬</div>
+            <span class="post__cat" data-en="WhatsApp" data-ar="واتساب">واتساب</span>
+            <h3 data-en="Why WhatsApp is the #1 booking channel for clinics in the GCC" data-ar="ليش الواتساب هو قناة الحجز رقم ١ للعيادات في الخليج">ليش الواتساب هو قناة الحجز رقم ١ للعيادات في الخليج</h3>
+            <span class="post__more" data-en="Read article →" data-ar="اقرأ المقال →">اقرأ المقال →</span>
+          </a>
+          <a class="post card" href="blog/speed-to-lead.html" data-reveal>
+            <div class="post__img post__img--3">⚡</div>
+            <span class="post__cat" data-en="Speed-to-lead" data-ar="سرعة الرد">سرعة الرد</span>
+            <h3 data-en="The 5-minute rule: how reply speed quietly decides your revenue" data-ar="قاعدة الـ٥ دقائق: كيف سرعة الرد تقرّر دخلك بهدوء">قاعدة الـ٥ دقائق: كيف سرعة الرد تقرّر دخلك بهدوء</h3>
+            <span class="post__more" data-en="Read article →" data-ar="اقرأ المقال →">اقرأ المقال →</span>
+          </a>
+          <a class="post card" href="blog/missed-calls-cost.html" data-reveal>
+            <div class="post__img post__img--1">💰</div>
+            <span class="post__cat" data-en="Revenue" data-ar="الدخل">الدخل</span>
+            <h3 data-en="What missed calls and messages really cost your clinic" data-ar="كم تكلّفك المكالمات والرسائل الفايتة فعلاً؟">كم تكلّفك المكالمات والرسائل الفايتة فعلاً؟</h3>
+            <span class="post__more" data-en="Read article →" data-ar="اقرأ المقال →">اقرأ المقال →</span>
+          </a>
+          <a class="post card" href="blog/ai-vs-receptionist.html" data-reveal>
+            <div class="post__img post__img--2">🤖</div>
+            <span class="post__cat" data-en="Comparison" data-ar="مقارنة">مقارنة</span>
+            <h3 data-en="AI assistant vs. human receptionist: the honest comparison" data-ar="مساعد ذكي أم موظف استقبال؟ المقارنة الصادقة">مساعد ذكي أم موظف استقبال؟ المقارنة الصادقة</h3>
+            <span class="post__more" data-en="Read article →" data-ar="اقرأ المقال →">اقرأ المقال →</span>
+          </a>
+          <a class="post card" href="blog/instagram-leads.html" data-reveal>
+            <div class="post__img post__img--3">📸</div>
+            <span class="post__cat" data-en="Instagram" data-ar="إنستقرام">إنستقرام</span>
+            <h3 data-en="How to turn Instagram ad leads into booked appointments" data-ar="كيف تحوّل عملاء إعلانات إنستقرام إلى مواعيد محجوزة">كيف تحوّل عملاء إعلانات إنستقرام إلى مواعيد محجوزة</h3>
+            <span class="post__more" data-en="Read article →" data-ar="اقرأ المقال →">اقرأ المقال →</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== FAQ ===== -->
+    <section class="section section--alt" id="faq">
+      <div class="container container--narrow">
+        <div class="section__head" data-reveal>
+          <span class="eyebrow" data-en="FAQ" data-ar="الأسئلة الشائعة">الأسئلة الشائعة</span>
+          <h2 data-en="Questions, answered" data-ar="أسئلتك، وإجاباتها">أسئلتك، وإجاباتها</h2>
+        </div>
+        <div class="faq">
+          <details class="faq__item" data-reveal><summary data-en="Does it use my clinic's own WhatsApp number?" data-ar="هل يستخدم رقم الواتساب الخاص بعيادتي؟">هل يستخدم رقم الواتساب الخاص بعيادتي؟</summary><p data-en="Yes. Radd runs on your clinic's WhatsApp Business number, so patients talk to your brand — never a random number." data-ar="نعم. رِدّ يعمل على رقم واتساب الأعمال الخاص بعيادتك، فالمرضى يكلّمون اسمك التجاري — مو رقم غريب.">نعم. رِدّ يعمل على رقم واتساب الأعمال الخاص بعيادتك، فالمرضى يكلّمون اسمك التجاري — مو رقم غريب.</p></details>
+          <details class="faq__item" data-reveal><summary data-en="Will it give medical advice?" data-ar="هل يعطي استشارات طبية؟">هل يعطي استشارات طبية؟</summary><p data-en="Never. Radd only handles scheduling, prices, and general info. Anything clinical is passed straight to your staff." data-ar="أبداً. رِدّ يتولّى فقط الحجوزات والأسعار والمعلومات العامة. أي شيء طبي يُحوّل مباشرة لفريقك.">أبداً. رِدّ يتولّى فقط الحجوزات والأسعار والمعلومات العامة. أي شيء طبي يُحوّل مباشرة لفريقك.</p></details>
+          <details class="faq__item" data-reveal><summary data-en="How long does setup take?" data-ar="كم ياخذ وقت التركيب؟">كم ياخذ وقت التركيب؟</summary><p data-en="Usually a few days. We collect your treatments, prices and hours, configure Radd, and test it thoroughly before going live." data-ar="عادة بضعة أيام. نجمع خدماتك وأسعارك وأوقاتك، نضبط رِدّ، ونجرّبه بدقة قبل التشغيل.">عادة بضعة أيام. نجمع خدماتك وأسعارك وأوقاتك، نضبط رِدّ، ونجرّبه بدقة قبل التشغيل.</p></details>
+          <details class="faq__item" data-reveal><summary data-en="Can a human take over a chat?" data-ar="هل يقدر موظف يتدخل بالمحادثة؟">هل يقدر موظف يتدخل بالمحادثة؟</summary><p data-en="Anytime. Your team can jump into any conversation instantly, and Radd hands off smoothly." data-ar="في أي وقت. فريقك يقدر يدخل أي محادثة فوراً، ورِدّ يسلّم بسلاسة.">في أي وقت. فريقك يقدر يدخل أي محادثة فوراً، ورِدّ يسلّم بسلاسة.</p></details>
+          <details class="faq__item" data-reveal><summary data-en="What if I want to cancel?" data-ar="وإذا حبيت ألغي؟">وإذا حبيت ألغي؟</summary><p data-en="No long lock-in — it's month-to-month after setup. But most clinics stay: the leak returns the moment Radd is switched off." data-ar="ما في ارتباط طويل — شهري بعد التأسيس. بس أغلب العيادات تستمر: التسريب يرجع لحظة ما توقف رِدّ.">ما في ارتباط طويل — شهري بعد التأسيس. بس أغلب العيادات تستمر: التسريب يرجع لحظة ما توقف رِدّ.</p></details>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Contact / Booking ===== -->
+    <section class="section cta" id="contact">
+      <div class="container cta__grid">
+        <div class="cta__copy" data-reveal>
+          <span class="eyebrow" data-en="Free Lead-Leak Audit" data-ar="تدقيق التسريب المجاني">تدقيق التسريب المجاني</span>
+          <h2 data-en="See exactly how much your clinic is losing — before you spend a single dirham." data-ar="شوف بالضبط كم تخسر عيادتك — قبل لا تصرف ولا درهم.">شوف بالضبط كم تخسر عيادتك — قبل لا تصرف ولا درهم.</h2>
+          <p data-en="Fill in the form and we'll send you a 1-page estimate of the revenue slipping away through missed messages and no-shows — and exactly how Radd captures most of it back. Prefer to chat? Tap WhatsApp." data-ar="عبّي النموذج ونرسل لك تقدير من صفحة وحدة للدخل اللي يضيع بسبب الرسائل الفايتة والمواعيد الضايعة — وكيف رِدّ يرجّع أغلبه بالضبط. تفضّل المحادثة؟ اضغط الواتساب.">عبّي النموذج ونرسل لك تقدير من صفحة وحدة للدخل اللي يضيع بسبب الرسائل الفايتة والمواعيد الضايعة — وكيف رِدّ يرجّع أغلبه بالضبط. تفضّل المحادثة؟ اضغط الواتساب.</p>
+          <a href="#" class="btn btn--whatsapp" id="waBtn" data-en="Chat on WhatsApp" data-ar="تواصل عبر الواتساب">تواصل عبر الواتساب</a>
+          <ul class="cta__assure">
+            <li data-en="✓ No obligation" data-ar="✓ بدون أي التزام">✓ بدون أي التزام</li>
+            <li data-en="✓ Reply within 24h" data-ar="✓ نرد خلال ٢٤ ساعة">✓ نرد خلال ٢٤ ساعة</li>
+            <li data-en="✓ Built for your clinic" data-ar="✓ مفصّل لعيادتك">✓ مفصّل لعيادتك</li>
+          </ul>
+        </div>
+
+        <form class="card form" id="leadForm" novalidate>
+          <div class="field">
+            <label for="name" data-en="Your name" data-ar="اسمك">اسمك</label>
+            <input id="name" name="name" type="text" required data-en-ph="e.g. Sara Al Ali" data-ar-ph="مثال: سارة العلي" />
+          </div>
+          <div class="field">
+            <label for="clinic" data-en="Clinic name" data-ar="اسم العيادة">اسم العيادة</label>
+            <input id="clinic" name="clinic" type="text" required data-en-ph="e.g. Glow Aesthetics" data-ar-ph="مثال: عيادة جلو" />
+          </div>
+          <div class="field">
+            <label for="phone" data-en="WhatsApp number" data-ar="رقم الواتساب">رقم الواتساب</label>
+            <input id="phone" name="phone" type="tel" required data-en-ph="+971 5x xxx xxxx" data-ar-ph="+971 5x xxx xxxx" />
+          </div>
+          <div class="field">
+            <label for="city" data-en="City" data-ar="المدينة">المدينة</label>
+            <input id="city" name="city" type="text" data-en-ph="e.g. Dubai" data-ar-ph="مثال: دبي" />
+          </div>
+          <div class="field field--full">
+            <label for="message" data-en="What's your biggest challenge right now?" data-ar="وش أكبر تحدٍ يواجهك حالياً؟">وش أكبر تحدٍ يواجهك حالياً؟</label>
+            <textarea id="message" name="message" rows="3" data-en-ph="Tell us about your clinic and what you'd like to fix..." data-ar-ph="كلّمنا عن عيادتك ووش تحب تصلّح..."></textarea>
+          </div>
+          <button type="submit" class="btn btn--primary btn--full" id="formSubmit" data-en="Send & get my free audit" data-ar="أرسل واحصل على تدقيقي المجاني">أرسل واحصل على تدقيقي المجاني</button>
+          <p class="form__note" data-en="By sending, you agree to be contacted about Radd. We respect your privacy." data-ar="بإرسالك توافق على التواصل معك بخصوص رِدّ. نحترم خصوصيتك.">بإرسالك توافق على التواصل معك بخصوص رِدّ. نحترم خصوصيتك.</p>
+          <div class="form__success" id="formSuccess" hidden>
+            <strong data-en="✓ Thank you! We'll be in touch within 24 hours." data-ar="✓ شكراً لك! بنتواصل معك خلال ٢٤ ساعة.">✓ شكراً لك! بنتواصل معك خلال ٢٤ ساعة.</strong>
+            <span data-en="You can also reach us instantly on WhatsApp." data-ar="تقدر توصلنا فوراً على الواتساب بعد.">تقدر توصلنا فوراً على الواتساب بعد.</span>
+          </div>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===== Footer ===== -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__brand">
+        <span class="brand brand--footer"><span class="brand__text">Radd<span class="brand__ar"> رِدّ</span></span></span>
+        <p data-en="The WhatsApp AI receptionist for Gulf clinics. Always reply. Always book." data-ar="مساعد الواتساب الذكي لعيادات الخليج. ردّ دائماً. واحجز دائماً.">مساعد الواتساب الذكي لعيادات الخليج. ردّ دائماً. واحجز دائماً.</p>
+      </div>
+      <div class="footer__links">
+        <a href="#solution" data-en="Solution" data-ar="الحل">الحل</a>
+        <a href="#cases" data-en="Case Studies" data-ar="قصص نجاح">قصص نجاح</a>
+        <a href="#pricing" data-en="Pricing" data-ar="الأسعار">الأسعار</a>
+        <a href="#blog" data-en="Blog" data-ar="المدونة">المدونة</a>
+        <a href="#about" data-en="About" data-ar="من نحن">من نحن</a>
+        <a href="#contact" data-en="Contact" data-ar="تواصل">تواصل</a>
+      </div>
+    </div>
+    <div class="container footer__bottom">
+      <span data-en="© 2026 Radd. All rights reserved." data-ar="© ٢٠٢٦ رِدّ. جميع الحقوق محفوظة.">© ٢٠٢٦ رِدّ. جميع الحقوق محفوظة.</span>
+    </div>
+  </footer>
+
+  <!-- Floating WhatsApp -->
+  <a href="#" class="fab" id="fabWa" aria-label="WhatsApp">
+    <svg viewBox="0 0 24 24" width="26" height="26" fill="#fff"><path d="M.057 24l1.687-6.163a11.867 11.867 0 01-1.587-5.946C.16 5.335 5.495 0 12.05 0a11.817 11.817 0 018.413 3.488 11.824 11.824 0 013.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 01-5.688-1.448L.057 24zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884a9.86 9.86 0 001.516 5.26l-.999 3.648 3.973-1.115zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.247-.694.247-1.289.173-1.413z"/></svg>
+  </a>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
