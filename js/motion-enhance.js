@@ -7,7 +7,7 @@
    If this module fails to load, main.js runs an IntersectionObserver
    fallback so content is never left hidden.
    ========================================================= */
-import { animate, inView, stagger } from "https://cdn.jsdelivr.net/npm/motion@11/+esm";
+import { animate, inView, stagger, scroll } from "https://cdn.jsdelivr.net/npm/motion@11/+esm";
 
 const root = document.documentElement;
 root.classList.add("has-motion"); // tells main.js to skip its fallback reveal
@@ -41,6 +41,7 @@ if (reduce) {
   document.querySelectorAll("[data-reveal]").forEach((el) => {
     if (el.closest(".hero__copy") || el.classList.contains("hero__phone")) return;
     if (el.closest(".grid")) return; // grid children handled by the stagger block
+    if (el.classList.contains("section__head")) return; // its children animate (stagger block below)
     inView(
       el,
       () => {
@@ -88,4 +89,56 @@ if (reduce) {
       { duration: 4 + i, repeat: Infinity, easing: "ease-in-out" }
     );
   });
+
+  /* ---- Section headings: title + subtext rise together ---- */
+  document.querySelectorAll(".section__head").forEach((head) => {
+    const parts = head.querySelectorAll(".eyebrow, h2, p");
+    if (!parts.length) return;
+    parts.forEach((p) => (p.style.opacity = "0"));
+    inView(
+      head,
+      () => {
+        animate(
+          parts,
+          { opacity: [0, 1], transform: ["translateY(20px)", "translateY(0px)"] },
+          { delay: stagger(0.08), duration: 0.55, easing: EASE }
+        );
+      },
+      { amount: 0.3 }
+    );
+  });
+
+  /* ---- Featured pricing card: slow breathing glow to draw the eye ---- */
+  const featured = document.querySelector(".price--featured");
+  if (featured) {
+    animate(
+      featured,
+      { boxShadow: [
+        "0 12px 36px rgba(7,20,15,.10)",
+        "0 20px 50px rgba(18,165,148,.28)",
+        "0 12px 36px rgba(7,20,15,.10)"
+      ] },
+      { duration: 3.5, repeat: Infinity, easing: "ease-in-out" }
+    );
+  }
+}
+
+/* ---- Scroll progress bar (runs regardless of reduced-motion: it's informational, not decorative) ---- */
+const bar = document.getElementById("scrollbar");
+if (bar) {
+  scroll((progress) => {
+    bar.style.transform = `scaleX(${progress})`;
+  });
+}
+
+/* ---- Subtle parallax on the hero background glow ---- */
+if (!reduce) {
+  const heroBg = document.querySelector(".hero__bg");
+  const heroSection = document.querySelector(".hero");
+  if (heroBg && heroSection) {
+    scroll(
+      (progress) => { heroBg.style.transform = `translateY(${progress * 70}px)`; },
+      { target: heroSection, offset: ["start start", "end start"] }
+    );
+  }
 }
