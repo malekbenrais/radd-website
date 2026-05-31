@@ -66,19 +66,26 @@ const onScroll = () => nav?.classList.toggle("scrolled", window.scrollY > 12);
 onScroll();
 window.addEventListener("scroll", onScroll, { passive: true });
 
-/* ---------------- Scroll reveal ---------------- */
-const revealObserver = new IntersectionObserver(
-  (entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add("in");
-        revealObserver.unobserve(entry.target);
-      }
-    });
-  },
-  { threshold: 0.12, rootMargin: "0px 0px -40px 0px" }
-);
-document.querySelectorAll("[data-reveal]").forEach((el) => revealObserver.observe(el));
+/* ---------------- Scroll reveal (fallback) ----------------
+   js/motion-enhance.js normally handles all reveal animations and adds
+   <html class="has-motion">. This observer only runs if Motion failed to
+   load, so content is never left hidden. */
+function initRevealFallback() {
+  if (document.documentElement.classList.contains("has-motion")) return;
+  const revealObserver = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("in");
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    },
+    { threshold: 0.12, rootMargin: "0px 0px -40px 0px" }
+  );
+  document.querySelectorAll("[data-reveal]").forEach((el) => revealObserver.observe(el));
+}
+window.addEventListener("load", () => setTimeout(initRevealFallback, 400));
 
 /* ---------------- Animated counters ---------------- */
 function animateCount(el) {

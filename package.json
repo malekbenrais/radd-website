@@ -1,0 +1,24 @@
+{
+  "name": "website",
+  "version": "1.0.0",
+  "description": "Marketing site for **Radd**, the WhatsApp AI receptionist for Gulf clinics & med spas. Static site (HTML/CSS/JS) — no build step. Arabic-first (RTL) with an English toggle.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/malekbenrais/radd-website.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/malekbenrais/radd-website/issues"
+  },
+  "homepage": "https://github.com/malekbenrais/radd-website#readme",
+  "dependencies": {
+    "motion": "^12.40.0"
+  }
+}

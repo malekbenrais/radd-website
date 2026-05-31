@@ -8,4 +8,7 @@ Thumbs.db
 # Deploy tool folders
 .netlify/
 .vercel/
+
+# npm — Motion is loaded from CDN at runtime; no need to commit deps
 node_modules/
+package-lock.json
