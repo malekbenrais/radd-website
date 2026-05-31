@@ -40,10 +40,25 @@ document.getElementById("langToggle")?.addEventListener("click", () => {
 /* ---------------- Mobile menu ---------------- */
 const burger = document.getElementById("burger");
 const navLinks = document.getElementById("navLinks");
-burger?.addEventListener("click", () => navLinks.classList.toggle("open"));
-navLinks?.querySelectorAll("a").forEach((a) =>
-  a.addEventListener("click", () => navLinks.classList.remove("open"))
-);
+const navScrim = document.getElementById("navScrim");
+
+function setMenu(open) {
+  if (!navLinks) return;
+  navLinks.classList.toggle("open", open);
+  burger?.classList.toggle("open", open);
+  navScrim?.classList.toggle("open", open);
+  document.body.classList.toggle("menu-open", open);
+  burger?.setAttribute("aria-expanded", open ? "true" : "false");
+}
+function toggleMenu() { setMenu(!navLinks?.classList.contains("open")); }
+function closeMenu() { setMenu(false); }
+
+burger?.addEventListener("click", toggleMenu);
+navScrim?.addEventListener("click", closeMenu);
+navLinks?.querySelectorAll("a").forEach((a) => a.addEventListener("click", closeMenu));
+// Close on Escape and when resizing back to desktop
+document.addEventListener("keydown", (e) => { if (e.key === "Escape") closeMenu(); });
+window.addEventListener("resize", () => { if (window.innerWidth > 900) closeMenu(); });
 
 /* ---------------- Nav scroll state ---------------- */
 const nav = document.getElementById("nav");
