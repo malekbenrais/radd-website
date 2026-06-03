@@ -9,6 +9,9 @@
    ========================================================= */
 import { animate, inView, stagger, scroll } from "https://cdn.jsdelivr.net/npm/motion@11/+esm";
 
+const root2 = document.documentElement;
+root2.classList.add("has-spring-count"); // tells main.js to skip its basic counter
+
 const root = document.documentElement;
 root.classList.add("has-motion"); // tells main.js to skip its fallback reveal
 
@@ -57,6 +60,8 @@ if (reduce) {
 
   /* ---- Grid children: pop in one after another ---- */
   document.querySelectorAll(".grid").forEach((grid) => {
+    // The #solution feature grid is driven by the scroll-pinned reveal below.
+    if (grid.closest("#solution")) return;
     const cards = grid.querySelectorAll(".card, .stat, .step, .why, .result");
     if (cards.length < 2) return;
     cards.forEach((c) => (c.style.opacity = "0"));
@@ -139,6 +144,106 @@ if (!reduce) {
     scroll(
       (progress) => { heroBg.style.transform = `translateY(${progress * 70}px)`; },
       { target: heroSection, offset: ["start start", "end start"] }
+    );
+  }
+}
+
+/* =========================================================
+   Spring-eased number counters (replaces main.js basic version)
+   A critically-damped spring settles the number naturally — no
+   linear ramp. Honors prefers-reduced-motion by snapping to final.
+   ========================================================= */
+function springCount(el) {
+  const target = parseFloat(el.getAttribute("data-count"));
+  const prefix = el.getAttribute("data-prefix") || "";
+  const suffix = el.getAttribute("data-suffix") || "";
+  if (isNaN(target)) return;
+  if (reduce) { el.textContent = prefix + target + suffix; return; }
+
+  // Simple spring integrator (stiffness/damping) for an organic settle.
+  let value = 0, velocity = 0;
+  const stiffness = 90, damping = 16, mass = 1;
+  let last = null;
+  function frame(now) {
+    if (last === null) last = now;
+    let dt = (now - last) / 1000; last = now;
+    if (dt > 0.05) dt = 0.05; // clamp after tab switches
+    const force = -stiffness * (value - target);
+    const damp = -damping * velocity;
+    velocity += (force + damp) / mass * dt;
+    value += velocity * dt;
+    if (Math.abs(target - value) < 0.5 && Math.abs(velocity) < 0.5) {
+      el.textContent = prefix + target + suffix;
+      return;
+    }
+    el.textContent = prefix + Math.round(value) + suffix;
+    requestAnimationFrame(frame);
+  }
+  requestAnimationFrame(frame);
+}
+document.querySelectorAll("[data-count]").forEach((el) => {
+  inView(el, () => springCount(el), { amount: 0.6 });
+});
+
+/* =========================================================
+   Scroll-pinned reveal of the 3 engine features
+   As the Solution section scrolls through, each feature card
+   rises and brightens in sequence, scrubbed to scroll position.
+   ========================================================= */
+if (!reduce) {
+  const solution = document.querySelector("#solution");
+  const featureCards = solution ? Array.from(solution.querySelectorAll(".feature")) : [];
+  if (featureCards.length) {
+    featureCards.forEach((c) => { c.style.opacity = "0"; c.style.transform = "translateY(40px)"; });
+    scroll(
+      (progress) => {
+        featureCards.forEach((card, i) => {
+          // each card occupies a slice of the scroll range
+          const slice = 1 / featureCards.length;
+          const local = Math.min(Math.max((progress - i * slice * 0.6) / slice, 0), 1);
+          card.style.opacity = String(local);
+          card.style.transform = `translateY(${40 - local * 40}px)`;
+        });
+      },
+      { target: solution, offset: ["start 0.85", "center 0.55"] }
+    );
+  }
+}
+
+/* =========================================================
+   Before / After scroll-scrub: the missed message dissolves,
+   the booked-patient conversation slides in to replace it.
+   ========================================================= */
+if (!reduce) {
+  const ba = document.querySelector("#ba");
+  const before = ba && ba.querySelector(".ba__phone--before");
+  const after = ba && ba.querySelector(".ba__phone--after");
+  const arrow = ba && ba.querySelector(".ba__arrow");
+  const wordBefore = ba && ba.querySelector(".ba__word--before");
+  const wordAfter = ba && ba.querySelector(".ba__word--after");
+  if (ba && before && after) {
+    // initial state: only the "before" is visible
+    after.style.opacity = "0";
+    after.style.transform = "translateY(30px) scale(0.96)";
+    if (arrow) { arrow.style.opacity = "0"; }
+    if (wordAfter) { wordAfter.style.opacity = "0.25"; }
+    scroll(
+      (p) => {
+        // p: 0 -> 1 across the tall pinned section
+        // Phase 1 (0-0.5): before fades & desaturates. Phase 2 (0.4-1): after rises in.
+        const fade = Math.min(p / 0.5, 1);
+        before.style.opacity = String(1 - fade * 0.65);
+        before.style.filter = `grayscale(${fade}) blur(${fade * 1.5}px)`;
+        before.style.transform = `translateY(${fade * -10}px) scale(${1 - fade * 0.04})`;
+
+        const rise = Math.min(Math.max((p - 0.4) / 0.6, 0), 1);
+        after.style.opacity = String(rise);
+        after.style.transform = `translateY(${30 - rise * 30}px) scale(${0.96 + rise * 0.04})`;
+        if (arrow) arrow.style.opacity = String(Math.min(Math.max((p - 0.3) / 0.3, 0), 1));
+        if (wordBefore) wordBefore.style.opacity = String(1 - fade * 0.75);
+        if (wordAfter) wordAfter.style.opacity = String(0.25 + rise * 0.75);
+      },
+      { target: ba, offset: ["start start", "end end"] }
     );
   }
 }

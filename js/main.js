@@ -113,7 +113,13 @@ const countObserver = new IntersectionObserver(
   },
   { threshold: 0.6 }
 );
-document.querySelectorAll("[data-count]").forEach((el) => countObserver.observe(el));
+// Motion (js/motion-enhance.js) takes over counters with spring physics and marks
+// <html class="has-spring-count">. This basic version only runs as a fallback.
+function initCountFallback() {
+  if (document.documentElement.classList.contains("has-spring-count")) return;
+  document.querySelectorAll("[data-count]").forEach((el) => countObserver.observe(el));
+}
+window.addEventListener("load", () => setTimeout(initCountFallback, 400));
 
 /* ---------------- Hero WhatsApp chat animation ---------------- */
 const waBody = document.getElementById("waBody");
