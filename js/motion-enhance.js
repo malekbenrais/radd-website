@@ -214,36 +214,32 @@ if (!reduce) {
    Before / After scroll-scrub: the missed message dissolves,
    the booked-patient conversation slides in to replace it.
    ========================================================= */
-if (!reduce) {
+if (!reduce && window.innerWidth > 760) {
   const ba = document.querySelector("#ba");
   const before = ba && ba.querySelector(".ba__phone--before");
   const after = ba && ba.querySelector(".ba__phone--after");
-  const arrow = ba && ba.querySelector(".ba__arrow");
   const wordBefore = ba && ba.querySelector(".ba__word--before");
   const wordAfter = ba && ba.querySelector(".ba__word--after");
   if (ba && before && after) {
-    // initial state: only the "before" is visible
-    after.style.opacity = "0";
-    after.style.transform = "translateY(30px) scale(0.96)";
-    if (arrow) { arrow.style.opacity = "0"; }
-    if (wordAfter) { wordAfter.style.opacity = "0.25"; }
+    // Both phones are ALWAYS visible (it's a comparison). Scroll only shifts
+    // emphasis: the "before" dims slightly while the "after" lifts and brightens.
+    const clamp = (n) => Math.min(Math.max(n, 0), 1);
     scroll(
       (p) => {
-        // p: 0 -> 1 across the tall pinned section
-        // Phase 1 (0-0.5): before fades & desaturates. Phase 2 (0.4-1): after rises in.
-        const fade = Math.min(p / 0.5, 1);
-        before.style.opacity = String(1 - fade * 0.65);
-        before.style.filter = `grayscale(${fade}) blur(${fade * 1.5}px)`;
-        before.style.transform = `translateY(${fade * -10}px) scale(${1 - fade * 0.04})`;
-
-        const rise = Math.min(Math.max((p - 0.4) / 0.6, 0), 1);
-        after.style.opacity = String(rise);
-        after.style.transform = `translateY(${30 - rise * 30}px) scale(${0.96 + rise * 0.04})`;
-        if (arrow) arrow.style.opacity = String(Math.min(Math.max((p - 0.3) / 0.3, 0), 1));
-        if (wordBefore) wordBefore.style.opacity = String(1 - fade * 0.75);
-        if (wordAfter) wordAfter.style.opacity = String(0.25 + rise * 0.75);
+        // emphasis ramps over the first ~60% then holds
+        const e = clamp(p / 0.6);
+        // "before": gently recede (never fully disappears — stays a clear comparison)
+        before.style.opacity = String(1 - e * 0.45);
+        before.style.filter = `grayscale(${e})`;
+        before.style.transform = `scale(${1 - e * 0.05})`;
+        // "after": rise into focus
+        after.style.transform = `translateY(${(1 - e) * 24}px) scale(${0.97 + e * 0.03})`;
+        after.style.opacity = String(0.6 + e * 0.4);
+        // headline words shift emphasis
+        if (wordBefore) wordBefore.style.opacity = String(1 - e * 0.6);
+        if (wordAfter) wordAfter.style.color = `color-mix(in srgb, var(--emerald-700) ${25 + e * 75}%, var(--ink-300))`;
       },
-      { target: ba, offset: ["start start", "end end"] }
+      { target: ba, offset: ["start end", "end start"] }
     );
   }
 }
